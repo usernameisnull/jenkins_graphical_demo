@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: graphical_demo
+  namespace: default
+  labels:
+    app: graphical_demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: graphical_demo
+  template:
+    metadata:
+      labels:
+        app: graphical_demo
+    spec:
+      containers:
+        - name: simple-http
+          image: 10.6.182.195:5000/mabing/kubesphere-graphical-demo:latest
+          ports:
+            - containerPort: 8080
