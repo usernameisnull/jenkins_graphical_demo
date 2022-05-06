@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: graphical_demo
+  name: graphical-demo
   namespace: default
   labels:
-    app: graphical_demo
+    app: graphical-demo
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: graphical_demo
+      app: graphical-demo
   template:
     metadata:
       labels:
-        app: graphical_demo
+        app: graphical-demo
     spec:
       containers:
         - name: simple-http
